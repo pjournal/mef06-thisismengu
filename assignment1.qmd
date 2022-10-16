@@ -5,8 +5,9 @@ date: "2022-10-01"
 
 This is a template example qmd output page. You may see an example R code below.
 
-```{r}
-set.seed(1)
-vec1 <- sample(LETTERS,5)
-paste0(vec1,collapse="")
-```
+title: "About Me"
+author: "F.Mengü Aydın"
+date: "Oct - 2022"
+format:
+  html:
+    code-fold: true
