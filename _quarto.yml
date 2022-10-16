@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 book:
-  title: "[STUDENT/GROUP NAME] Progress Journal"
-  repo-url: https://github.com/pjournal/gh-pages-quarto-template
+  title: "Fazlı Mengü Aydın"
+  repo-url: https://github.com/pjournal/mef06-thisismengu.git
   chapters:
     - index.qmd
     - assignment1.qmd
@@ -17,4 +17,5 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    
 
