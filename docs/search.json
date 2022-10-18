@@ -9,8 +9,22 @@
   {
     "objectID": "assignment1.html",
     "href": "assignment1.html",
-    "title": "1  About Mengu",
+    "title": "1  About Mengü",
     "section": "",
-    "text": "Coming soon"
+    "text": "-My name is Mengü…"
+  },
+  {
+    "objectID": "assignment1.html#r",
+    "href": "assignment1.html#r",
+    "title": "1  About Mengü",
+    "section": "1.2 R",
+    "text": "1.2 R"
+  },
+  {
+    "objectID": "assignment1.html#r2",
+    "href": "assignment1.html#r2",
+    "title": "1  About Mengü",
+    "section": "1.3 R2",
+    "text": "1.3 R2"
   }
 ]

@@ -1,6 +1,19 @@
 ---
-title: "About Mengu"
+title: "About Mengü"
+author: "F. Mengü Aydın"
 date: "2022-10-16"
+toc: true
+number-sections: true
+
+format: 
+  html: 
+    smooth-scroll: true
 ---
 
-Coming soon
+## Who am I?
+
+-My name is Mengü...
+
+## R
+
+## R2
