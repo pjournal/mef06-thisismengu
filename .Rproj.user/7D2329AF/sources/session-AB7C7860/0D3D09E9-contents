@@ -5,9 +5,9 @@ author: "F. Mengü Aydın"
 date: "2022-10-18"
 toc: true
 number-sections: true
-
 format: 
   html: 
+    mainfont: system-ui
     smooth-scroll: true
 ---
 
