@@ -1,0 +1,17 @@
+install.packages("tidyverse")
+
+
+library(tidyverse) #tidyverse is a package group which includes dplyr as well
+
+library(lubridate)
+
+raw_df <- readRDS("/Users/thisismengu/Documents/GitHub/mef06-thisismengu/rp_201801_202005_df.rds")
+
+print(raw_df,n=3)
+
+raw_df %>% glimpse()
+
+options(tibble.print_max = 3, tibble.print_min= 3)
+
+raw_df %>% select(dt,wind_lic)
+

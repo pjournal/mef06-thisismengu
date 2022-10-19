@@ -1,0 +1,12 @@
+---
+title: "In class"
+subtitle: "Data Analyses with R"
+author: "F. Mengü Aydın"
+date: "2022-10-19"
+toc: true
+number-sections: true
+format: 
+  html: 
+    mainfont: system-ui
+    smooth-scroll: true
+---
