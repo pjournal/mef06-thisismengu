@@ -10,8 +10,32 @@ format:
     mainfont: system-ui
     smooth-scroll: true
 ---
-install.packages("tidyverse")
+# Planes Dataset Analysis with dplyr
+## Library process
 
-install.packages("nycflights13")
+```{r}
+library(nycflights13)
+library(tidyverse)
+library(dplyr)
+```
 
-library("nycflights13")
+## Summary of planes table
+```{r}
+summary(planes)
+```
+```{r}
+head(planes)
+```
+```{r}
+tail(planes)
+```
+
+# Planes numbers by year
+```{r}
+planes_by_year <- group_by(planes,year)
+ g <- summarise (planes_by_year,count =  length(year))
+```
+```{r}
+print(g, n=47)
+```
+

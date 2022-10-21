@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -133,7 +196,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#planes-dataset-analysis-with-dplyr" id="toc-planes-dataset-analysis-with-dplyr" class="nav-link active" data-scroll-target="#planes-dataset-analysis-with-dplyr"><span class="toc-section-number">3</span>  Planes Dataset Analysis with dplyr</a>
+  <ul class="collapse">
+  <li><a href="#library-process" id="toc-library-process" class="nav-link" data-scroll-target="#library-process"><span class="toc-section-number">3.1</span>  Library process</a></li>
+  <li><a href="#summary-of-planes-table" id="toc-summary-of-planes-table" class="nav-link" data-scroll-target="#summary-of-planes-table"><span class="toc-section-number">3.2</span>  Summary of planes table</a></li>
+  </ul></li>
+  <li><a href="#planes-numbers-by-year" id="toc-planes-numbers-by-year" class="nav-link" data-scroll-target="#planes-numbers-by-year"><span class="toc-section-number">4</span>  Planes numbers by year</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -167,8 +241,153 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="planes-dataset-analysis-with-dplyr" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Planes Dataset Analysis with dplyr</h1>
+<section id="library-process" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="library-process"><span class="header-section-number">3.1</span> Library process</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6      ✔ purrr   0.3.5 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="summary-of-planes-table" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="summary-of-planes-table"><span class="header-section-number">3.2</span> Summary of planes table</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(planes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   tailnum               year          type           manufacturer      
+ Length:3322        Min.   :1956   Length:3322        Length:3322       
+ Class :character   1st Qu.:1997   Class :character   Class :character  
+ Mode  :character   Median :2001   Mode  :character   Mode  :character  
+                    Mean   :2000                                        
+                    3rd Qu.:2005                                        
+                    Max.   :2013                                        
+                    NA's   :70                                          
+    model              engines          seats           speed      
+ Length:3322        Min.   :1.000   Min.   :  2.0   Min.   : 90.0  
+ Class :character   1st Qu.:2.000   1st Qu.:140.0   1st Qu.:107.5  
+ Mode  :character   Median :2.000   Median :149.0   Median :162.0  
+                    Mean   :1.995   Mean   :154.3   Mean   :236.8  
+                    3rd Qu.:2.000   3rd Qu.:182.0   3rd Qu.:432.0  
+                    Max.   :4.000   Max.   :450.0   Max.   :432.0  
+                                                    NA's   :3299   
+    engine         
+ Length:3322       
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+                   </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(planes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  tailnum  year type                    manuf…¹ model engines seats speed engine
+  &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                   &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; 
+1 N10156   2004 Fixed wing multi engine EMBRAER EMB-…       2    55    NA Turbo…
+2 N102UW   1998 Fixed wing multi engine AIRBUS… A320…       2   182    NA Turbo…
+3 N103US   1999 Fixed wing multi engine AIRBUS… A320…       2   182    NA Turbo…
+4 N104UW   1999 Fixed wing multi engine AIRBUS… A320…       2   182    NA Turbo…
+5 N10575   2002 Fixed wing multi engine EMBRAER EMB-…       2    55    NA Turbo…
+6 N105UW   1999 Fixed wing multi engine AIRBUS… A320…       2   182    NA Turbo…
+# … with abbreviated variable name ¹​manufacturer</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(planes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 9
+  tailnum  year type                    manuf…¹ model engines seats speed engine
+  &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;                   &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; 
+1 N996DL   1991 Fixed wing multi engine MCDONN… MD-88       2   142    NA Turbo…
+2 N997AT   2002 Fixed wing multi engine BOEING  717-…       2   100    NA Turbo…
+3 N997DL   1992 Fixed wing multi engine MCDONN… MD-88       2   142    NA Turbo…
+4 N998AT   2002 Fixed wing multi engine BOEING  717-…       2   100    NA Turbo…
+5 N998DL   1992 Fixed wing multi engine MCDONN… MD-88       2   142    NA Turbo…
+6 N999DN   1992 Fixed wing multi engine MCDONN… MD-88       2   142    NA Turbo…
+# … with abbreviated variable name ¹​manufacturer</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="planes-numbers-by-year" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Planes numbers by year</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>planes_by_year <span class="ot">&lt;-</span> <span class="fu">group_by</span>(planes,year)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a> g <span class="ot">&lt;-</span> <span class="fu">summarise</span> (planes_by_year,<span class="at">count =</span>  <span class="fu">length</span>(year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(g, <span class="at">n=</span><span class="dv">47</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 47 × 2
+    year count
+   &lt;int&gt; &lt;int&gt;
+ 1  1956     1
+ 2  1959     2
+ 3  1963     2
+ 4  1965     1
+ 5  1967     1
+ 6  1968     1
+ 7  1972     1
+ 8  1973     1
+ 9  1974     1
+10  1975     3
+11  1976     3
+12  1977     2
+13  1978     2
+14  1979     4
+15  1980     4
+16  1983     1
+17  1984     5
+18  1985    23
+19  1986    17
+20  1987    40
+21  1988    75
+22  1989    60
+23  1990    90
+24  1991   108
+25  1992   109
+26  1993    59
+27  1994    48
+28  1995    54
+29  1996    55
+30  1997    74
+31  1998   174
+32  1999   206
+33  2000   244
+34  2001   284
+35  2002   212
+36  2003   150
+37  2004   192
+38  2005   162
+39  2006   126
+40  2007   123
+41  2008   147
+42  2009    84
+43  2010    48
+44  2011    66
+45  2012    95
+46  2013    92
+47    NA    70</code></pre>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,44 +1,16 @@
 [
   {
+    "objectID": "In class.html",
+    "href": "In class.html",
+    "title": "2  In class",
+    "section": "",
+    "text": "4 Planes numbers by year\n\nplanes_by_year <- group_by(planes,year)\n g <- summarise (planes_by_year,count =  length(year))\n\n\nprint(g, n=47)\n\n# A tibble: 47 × 2\n    year count\n   <int> <int>\n 1  1956     1\n 2  1959     2\n 3  1963     2\n 4  1965     1\n 5  1967     1\n 6  1968     1\n 7  1972     1\n 8  1973     1\n 9  1974     1\n10  1975     3\n11  1976     3\n12  1977     2\n13  1978     2\n14  1979     4\n15  1980     4\n16  1983     1\n17  1984     5\n18  1985    23\n19  1986    17\n20  1987    40\n21  1988    75\n22  1989    60\n23  1990    90\n24  1991   108\n25  1992   109\n26  1993    59\n27  1994    48\n28  1995    54\n29  1996    55\n30  1997    74\n31  1998   174\n32  1999   206\n33  2000   244\n34  2001   284\n35  2002   212\n36  2003   150\n37  2004   192\n38  2005   162\n39  2006   126\n40  2007   123\n41  2008   147\n42  2009    84\n43  2010    48\n44  2011    66\n45  2012    95\n46  2013    92\n47    NA    70"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Fazlı Mengü Aydın",
     "section": "",
     "text": "This progress journal covers Fazlı Mengü Aydın’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
-  },
-  {
-    "objectID": "assignment1.html",
-    "href": "assignment1.html",
-    "title": "1  Assignment 1",
-    "section": "",
-    "text": "I studied mainly math&science in high school. Also I wanted to be a businessman. I believed in that this could happen by study business. Therefore, I choose to study International Trade&Management at Yeditepe University as a full scholarship student in 2014. This is one of my big mistakes. I completed an amazing english prep-school in my first year of university. However, I was disappointed after completed one year in the faculty because of the course contents. To continue my letter, I should say that I see Steve Jobs as my role model. After disappointment, I decided to educate myself based on my interests like Steve Jobs. This is one of my good decisions. I attended to other faculties’ lessons like, calculus, algebra, data structures as a guest student. Also, I used open sources to read, listen and learn about global trends. A lot of articles, business professionals pointed out big data, data analytics, machine learning and AI. I aimed to learn more things about these disciplines. In addition to my theoretic works, I worked for Shell Turkey and Dünya Varlık as a long term intern for 1.5 years in total. All of lessons, internship experiments and learnings added vision to me, also added one semester to my university life. After a short delay, I graduated from university in July 2020. My work journey started with Shell Turkey in 2018 as an Intern. My project was collecting data from Investment models and creating a readable and writeable a data lake with collected data. Thanks to this project, I learnt data literacy principles. After completed my project, I started to work for Dünya Varlık as a Intern and promoted to part-time Treasury Analyst in 2019. In my Internship, I observed treasury operations, cash-flow models. In my treasury analyst period, I built a Excel, VBA based mini ERP system for treasury operations with treasury director. Also, I develop cash flow model. My ERP and modeling project was very appreciated so, I was promoted to the junior data analyst in analytics team by CEO. In my junior period, I had chance to learn SQL. After graduation I started to work full time and built data driven collection strategies. Last in Dünya Varlık, I completed a project that aimed to predict who, when and how much pays in 10 years as a head analyst. The project sponsored by CEO and Experian was consultant company. After completed project, I decided to work for a global company. Therefore I changed my work and I have been working for ING Turkey since march 2022. I am responsible for collection strategies development and implementation. You can easily reach my LinkedIn page in this link.\nIn my special life, I am a Sudoku hunter. I believe in cause and effect which is represented by Sudoku\n\n\n\nSamurai sudoku puzzles consist of five overlapping sudoku grids."
-  },
-  {
-    "objectID": "assignment1.html#r",
-    "href": "assignment1.html#r",
-    "title": "1  Assignment 1",
-    "section": "1.2 R",
-    "text": "1.2 R"
-  },
-  {
-    "objectID": "assignment1.html#r2",
-    "href": "assignment1.html#r2",
-    "title": "1  Assignment 1",
-    "section": "1.3 R2",
-    "text": "1.3 R2"
-  },
-  {
-    "objectID": "assignment1.html#forecasting-nowcasting",
-    "href": "assignment1.html#forecasting-nowcasting",
-    "title": "1  Assignment 1",
-    "section": "1.2 Forecasting Nowcasting",
-    "text": "1.2 Forecasting Nowcasting\nYou can easily watch video in this link"
-  },
-  {
-    "objectID": "assignment1.html#r-posts",
-    "href": "assignment1.html#r-posts",
-    "title": "1  Assignment 1",
-    "section": "1.3 R Posts",
-    "text": "1.3 R Posts\n\n1.3.1 What is R Analytics?\nR analytics is data analytics using R programming language, an open-source language used for statistical computing or graphics. This programming language is often used in statistical analysis and data mining. It can be used for analytics to identify patterns and build practical models. R not only can help analyze organizations’ data, but also be used to help in the creation and development of software applications that perform statistical analysis.\nWhile R programming was originally designed for statisticians, it can be implemented for a variety of uses including predictive analytics, data modeling, and data mining. Businesses can implement R to create custom models for data collection, clustering, and analytics. R analytics can provide a valuable way to quickly develop models targeted at understanding specific areas of the business and delivering tailored insights on day-to-day needs.\nR analytics can be used for the following purposes:\nStatistical testing, Prescriptive analytics, Predictive analytics, Time-series analysis, What-if analysis, Regression models, Data exploration, Forecasting, Text mining, Data mining, Visual analytics, Web analytics, Social media analytics, Sentiment analysis\nSource : What is R Analytics\n\n\n1.3.2 Using Linear Regression for Predictive Modeling in R\nn R programming, predictive models are extremely useful for forecasting future outcomes and estimating metrics that are impractical to measure. For example, data scientists could use predictive models to forecast crop yields based on rainfall and temperature, or to determine whether patients with certain traits are more likely to react badly to a new medication.\nBefore we talk about linear regression specifically, let’s remind ourselves what a typical data science workflow might look like. A lot of the time, we’ll start with a question we want to answer, and do something like the following:\nCollect some data relevant to the problem (more is almost always better). Clean, augment, and preprocess the data into a convenient form, if needed. Conduct an exploratory analysis of the data to get a better sense of it. Using what you find as a guide, construct a model of some aspect of the data. Use the model to answer the question you started with, and validate your results.\n\n\n\nLinear Regression Model Fit to Data\n\n\nSource : Using Linear Regression for Predictive Modeling in R\n\n\n1.3.3 Using R for Time Series Analysis\nThis booklet itells you how to use the R statistical software to carry out some simple analyses that are common in analysing time series data.\nThis booklet assumes that the reader has some basic knowledge of time series analysis, and the principal focus of the booklet is not to explain time series analysis, but rather to explain how to carry out these analyses using R.\n\n\n\nUsing R for Time Series Analysis\n\n\nSource : Using R for Time Series Analysis"
   }
 ]
