@@ -38,4 +38,16 @@ planes_by_year <- group_by(planes,year)
 ```{r}
 print(g, n=47)
 ```
+```{r}
+m <- distinct(planes,manufacturer)
+```
+```{r}
+planes_by_manufacturer <- group_by(planes,manufacturer)
+pbm <- summarise(planes_by_manufacturer,count = length(year))
+print (pbm,n=35)
+```
+```{r}
+md <- planes %>% filter(manufacturer=="BOEING")
+max (md$year)
+```
 

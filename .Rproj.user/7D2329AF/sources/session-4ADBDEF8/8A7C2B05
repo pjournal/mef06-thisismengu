@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/mef06-thisismengu/In class.qmd",
     "project_path": "In class.qmd",
     "type": "quarto_markdown",
-    "hash": "2981125330",
+    "hash": "1617950538",
     "contents": "",
     "dirty": false,
     "created": 1666201174305.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "28,6",
-        "scrollLine": "25"
+        "cursorPosition": "49,46",
+        "scrollLine": "36"
     },
     "folds": "",
-    "lastKnownWriteTime": 1666373867,
+    "lastKnownWriteTime": 1666375113,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1666373867267,
+    "last_content_update": 1666375113062,
     "read_only": false,
     "read_only_alternatives": []
 }
