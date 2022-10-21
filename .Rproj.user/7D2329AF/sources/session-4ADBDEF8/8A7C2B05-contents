@@ -10,3 +10,8 @@ format:
     mainfont: system-ui
     smooth-scroll: true
 ---
+install.packages("tidyverse")
+
+install.packages("nycflights13")
+
+library("nycflights13")
